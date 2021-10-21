@@ -1,0 +1,63 @@
+.page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    padding: $indent;
+
+    &__form-wrap {
+        width: 100%;
+        max-width: 570px;
+        padding: ($indent-large + $indent-small) ($indent-big + $indent-small) ($indent-big + $indent-small);
+        text-align: center;
+        background-color: $white;
+        border-radius: 16px;
+        box-shadow: 5px 10px 30px rgba(#000, .05);
+    }
+    &__logo {
+        @include background('images/icons/logo.svg');
+        width: 80px;
+        height: 82px;
+        margin: 0 auto $indent-large;
+    }
+    &__title {
+        @include font-style($montserrat-bold, 24px, $black, 29px);
+        margin-bottom: ($indent-big + $indent-small);
+    }
+    &__text {
+        @include font-style($montserrat, 18px, $black, 22px);
+        margin-top: ($indent-extra-large / 2);
+    }
+    &__link {
+        @include font-style($montserrat-bold, inherit, $green, inherit);
+        text-decoration: underline;
+        transition: .3s;
+        &:hover {
+            text-decoration: none;
+        }
+    }
+
+    @media (max-width: 569px) {
+        &__form-wrap {
+            max-width: 340px;
+            padding: $indent-large $indent $indent;
+        }
+        &__gender-wrap,
+        &__logo {
+            margin-bottom: ($indent-extra-large / 2);
+        }
+        &__logo {
+            width: 55px;
+            height: 56px;
+        }
+        &__title {
+            margin-bottom: $indent-large;
+        }
+        &__text {
+            margin-top: $indent;
+            font-size: 14px;
+            line-height: 17px;
+        }
+    }
+}

@@ -1,0 +1,6 @@
+.label {
+    @include font-style($montserrat-bold, 18px, $black, 22px);
+    display: block;
+    padding-bottom: $indent-regular;
+    text-align: left;
+}

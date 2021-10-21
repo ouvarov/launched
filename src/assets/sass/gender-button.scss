@@ -1,0 +1,33 @@
+.gender-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 156px;
+    height: 100px;
+    color: $black;
+    text-align: center;
+    border: 1px solid $grey;
+    border-radius: 16px;
+
+    &:hover {
+        color: $green-extra-light;
+        border-color: $green-extra-light;
+    }
+    &__icon {
+        display: block;
+        margin-bottom: $indent-medium;
+    }
+    &__text {
+        @include font-style($montserrat, 18px, inherit, 22px);
+    }
+    &--active {
+        color: $green;
+        border-color: $green;
+    }
+
+    @media (max-width: 569px) {
+        width: 90px;
+        height: 80px;
+    }
+}

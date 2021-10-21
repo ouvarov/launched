@@ -1,0 +1,26 @@
+.button {
+    @include font-style($montserrat-bold, 18px, $white);
+    width: 100%;
+    padding: $indent-large;
+    background-color: $green;
+    border-radius: 16px;
+    transition: .3s;
+    &:hover {
+        background-color: $green-light;
+    }
+    &:focus,
+    &:active {
+        background-color: $green-dark;
+    }
+
+    &--disabled {
+        color: $black;
+        background: $grey;
+        pointer-events: none;
+    }
+
+    @media (max-width: 569px) {
+        height: 50px;
+        padding: $indent-regular;
+    }
+}

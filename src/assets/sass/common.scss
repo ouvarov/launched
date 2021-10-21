@@ -1,0 +1,9 @@
+@mixin media($width) {
+    @media only screen and (max-width: $width + px) {
+        @content;
+    }
+}
+
+//fonts
+$montserrat: 'Montserrat', sans-serif;
+$montserrat-bold: 'Montserrat-Bold', sans-serif;

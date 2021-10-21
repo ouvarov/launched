@@ -1,0 +1,21 @@
+.alert {
+    @include visibility;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    &__grid {
+        @include font-style($montserrat-bold, 16px, $white);
+        width: 100%;
+        max-width: 768px;
+        margin: $indent auto;
+        padding: $indent;
+        text-align: center;
+        background-color: $error;
+        border-radius: 8px;
+    }
+    &--show {
+        @include visibility(visible ,1);
+    }
+}

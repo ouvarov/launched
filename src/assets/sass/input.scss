@@ -1,0 +1,60 @@
+.input {
+    position: relative;
+    margin-bottom: $indent-big;
+    text-align: left;
+
+    &__show-password {
+        @include background('images/icons/eye.svg');
+        @include size(30px);
+        position: absolute;
+        top: 50%;
+        right: 24px;
+        transform: translateY(-50%);
+    }
+    &__control-wrap {
+        position: relative;
+    }
+    &__control {
+        @include placeholder-color($indent-large);
+        @include placeholder-font-family($montserrat);
+        @include font-style($montserrat, 18px, $black, 22px);
+        box-sizing: border-box;
+        width: 100%;
+        height: 70px;
+        padding: $indent-large;
+        border: 1px solid $grey;
+        border-radius: 16px;
+        &:focus {
+            border-color: $green-extra-light;
+        }
+    }
+    &__error {
+        @include font-style($montserrat, 16px, $error,20px);
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+    }
+    &--password {
+        .input {
+            &__control {
+                padding-right: ($indent-large + $indent-big);
+            }
+        }
+    }
+    &--error {
+        .input {
+            &__control {
+                color: $error;
+                border-color: $error;
+            }
+        }
+    }
+
+    @media (max-width: 569px) {
+        margin-bottom: ($indent-extra-large / 2);
+        &__control {
+            height: 50px;
+            padding: $indent;
+        }
+    }
+}

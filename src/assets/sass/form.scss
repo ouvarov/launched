@@ -1,0 +1,10 @@
+.form {
+    padding-bottom: $indent-medium;
+
+    &__gender-wrap {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: $indent-big;
+    }
+}
